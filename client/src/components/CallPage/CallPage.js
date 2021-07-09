@@ -69,7 +69,7 @@ const CallPage = () => {
 
                 peer = new Peer({
                     initiator: isAdmin,
-                    trickle: false,
+                    trickle: true,
                     stream: stream,
                 });
 
