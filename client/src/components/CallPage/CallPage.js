@@ -133,13 +133,13 @@ const CallPage = () => {
                     // got remote video stream, now let's show it in a video tag
                     let video = document.querySelector("video");
 
-                    if ("srcObject" in video) {
-                        video.srcObject = stream;
-                    }
-                    else {
-                        video.src = window.URL.createObjectURL(stream);   // for older browsers
-                    }
-
+                    // if ("srcObject" in video) {
+                    //     video.srcObject = stream;
+                    // }
+                    // else {
+                    //     // video.src = window.URL.createObjectURL(stream);   // for older browsers
+                    // }
+                    video.srcObject = stream;
                     video.play();
                 });
             })
