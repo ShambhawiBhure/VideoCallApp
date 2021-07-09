@@ -69,7 +69,7 @@ const CallPage = () => {
 
                 peer = new Peer({
                     initiator: isAdmin,
-                    trickle: true,
+                    trickle: false,
                     stream: stream,
                 });
 
@@ -143,8 +143,8 @@ const CallPage = () => {
                     video.play();
                 });
             })
-            .catch(() => {
-                console.log('error');
+            .catch((ex) => {
+                console.log(ex.message);
             })
     };
 
