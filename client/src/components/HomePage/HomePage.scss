@@ -1,0 +1,115 @@
+.home-page{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #141E30, #243B55);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #141E30, #243B55); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+    .body{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .left-side{
+            max-width: 500px;
+            .content{
+                h1{
+                    font-size: 55px;
+                    font-weight: 600;
+                    margin-bottom: 3%;
+                    color: #fff;
+                }
+                h2{
+                    font-size: 30px;
+                    font-weight: 300;
+                    color: #fff;
+                }
+                .action-btn{
+                    margin-top: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .btn{
+                        font-weight: 600;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 16px;
+                        padding: 15px;
+                        border: none;
+                        outline: none;
+                        background: #fff; 
+                        border-radius: 5px;
+                        color: #212529;
+                        text-decoration: none;
+                        .icon-block{
+                            padding-right: 10px;
+                            font-size: x-large;
+                            &:hover{
+                                color: #000;
+                            }
+                        }
+                    }
+                    .join{
+                        font-weight: 600;
+                        background: transparent;
+                        color: #fff;
+                        border: 2px solid #fff;
+                        &:hover{
+                            border: 2.5px solid #fff;
+                        }
+                    }
+                    .input-block{
+                        margin-left: 20px;
+                        display: flex;
+                        flex: 1;
+                        .input-section{
+                            position: relative;
+                            margin-right: 10px;
+                            .icon-block{
+                                position: absolute;
+                                top: 50%;
+                                transform: translate(10px, -50%);
+                                color: #5f6368;
+                            }
+                            input{
+                                color: #fff;
+                                font-size: 16px;
+                                background: transparent;
+                                height: 57px;
+                                border: 1px solid #fff;
+                                border-radius: 5px;
+                                padding-left: 35px;
+                                width: 100%;
+                                box-sizing: border-box;
+                                outline: none;
+                                &:hover{
+                                    border: 2px solid #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right-side{
+            img{
+                width: 600px;
+                height: 500px;
+            }
+        }
+    }
+}
+
+
+$breakpoint-tablet: 800px;
+@media (max-width: $breakpoint-tablet) {
+    .body{
+      .right-side{
+          display: none;
+      }
+  }
+}

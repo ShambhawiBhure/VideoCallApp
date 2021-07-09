@@ -1,0 +1,12 @@
+.callpage-container{
+    .video-container{
+        background: rgb(80, 79, 79);
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}

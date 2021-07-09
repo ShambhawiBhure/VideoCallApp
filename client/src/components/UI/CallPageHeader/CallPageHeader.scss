@@ -1,0 +1,58 @@
+.frame-header{
+    .optionheader{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 13%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #293B5F;
+        overflow: hidden;
+        .header-items{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            flex: 1;
+            border-right: 1px solid rgb(245,245,245);
+            position: relative;
+            .alert-circle-icon{
+                position: absolute;
+                background: #424656;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                top: 15px;
+                right: 13px;
+            }
+            &.date-block{
+                font-size: 22px;
+                color: #fff;
+                min-width: 140px;
+                font-weight: 400;
+                &:hover{
+                    cursor: pointer;
+                    box-shadow: 0 0 10px #000;
+                    background: #293B5F;
+                }
+            }
+            &.icon-block{
+                width: 50px;
+                height: 50px;
+                margin-left: 5px;
+                .icon{
+                    color: #fff;
+                    font-size: 20px;
+                }
+                &:hover{
+                    cursor: pointer;
+                    box-shadow: 0 0 10px #000;
+                    background: #464775;
+                    border-right: 0px solid;
+                }
+            }
+        }
+    }
+}

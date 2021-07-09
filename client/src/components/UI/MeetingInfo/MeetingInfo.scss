@@ -1,0 +1,60 @@
+.meeting-info-block{
+    position: absolute;
+    top: 130px;
+    left: 80px;
+    background: #dee1ee;
+    padding: 25px;
+    width: 310px;
+    .meeting-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #000;
+        .icon{
+            cursor: pointer;
+            font-size: 20px;
+        }
+    }
+    .info-text{
+        color: #000;
+        font-size: 14px;
+    }
+    .meet-link{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #F8F8F8;
+        padding: 15px;
+        border-radius: 5px;
+        span{
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            outline: none;
+            background: none;
+            flex: 1;
+            color: #555;
+        }
+        .icon{
+            cursor: pointer;
+            color: #293B5F;
+            &:hover{
+                color: #000;
+            }
+        } 
+    }
+    .share_social {
+        display: flex;
+        margin-top: 1rem;
+        .info-text{
+            color: #000;
+            font-size: 14px;
+        }
+        .share_icon {
+            display: flex;
+            margin-left: 0.4rem;
+        }
+
+    }
+    
+}

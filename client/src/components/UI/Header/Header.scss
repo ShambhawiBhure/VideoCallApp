@@ -1,0 +1,17 @@
+@import "~bootstrap/scss/bootstrap";
+
+#dblue{
+    background-color: transparent !important;
+    #logo{
+        margin-left: 90px;
+    }
+}
+
+.icon-block{
+    &:hover{
+        color: #fff;
+    }
+}
+.last{
+    margin-right: 90px !important;
+}
