@@ -1,7 +1,7 @@
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer, useState, useRef } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { getRequest, postRequest } from './../../utils/apiRequests';
-import { BASE_URL, GET_CALL_ID, SAVE_CALL_ID } from './../../utils/apiEndpoints';
+import { BASE_URL, GET_CALL_ID, SAVE_CALL_ID, GET_ICE_SERVER } from './../../utils/apiEndpoints';
 import io from "socket.io-client";
 import CallPageHeader1 from '../UI/CallPageHeader1/CallPageHeader1';
 import MeetingInfo from '../UI/MeetingInfo/MeetingInfo';
@@ -29,6 +29,7 @@ const CallPage = () => {
         MessageListReducer,
         initialState
     );
+    const iceServers = useRef([]);
 
     const [streamObj, setStreamObj] = useState();
     const [screenCastStream, setScreenCastStream] = useState();
@@ -43,14 +44,23 @@ const CallPage = () => {
         //meeting info popup should be accesible only by the admin
         if (isAdmin) {
             setMeetInfoPopup(true);
+            getICServer();
         }
-        initWebRTC();
+        else {
+            initWebRTC();
+        }
         socket.on("code", (data) => {
             if (data.url === url) {
-              peer.signal(data.code);
+                peer.signal(data.code);
             }
-          });
-        }, [isAdmin, url]);
+        });
+    }, []);
+
+    const getICServer = async () => {
+        const response = await getRequest(`${BASE_URL}${GET_ICE_SERVER}`);
+        iceServers.current = response;
+        initWebRTC();
+    }
 
     const getReceiverCode = async () => {
         const response = await getRequest(`${BASE_URL}${GET_CALL_ID}/${id}`);
@@ -66,19 +76,34 @@ const CallPage = () => {
         })
             .then((stream) => {
                 setStreamObj(stream); //now this stream is available inside state
+                stream.getAudioTracks()[0].enabled = false;
+                setIsAudio(false);
+                stream.getVideoTracks()[0].enabled = false;
+                setIsVideo(false);
 
-                peer = new Peer({
-                    initiator: isAdmin,
-                    trickle: false,
-                    stream: stream,
-                });
+                if (isAdmin && iceServers.current && iceServers.current.length) {
+                    peer = new Peer({
+                        initiator: isAdmin,
+                        trickle: false,
+                        stream: stream,
+                        config: {
+                            iceServers: iceServers.current
+                        }
+                    });
+                }
 
                 if (!isAdmin) {
+                    peer = new Peer({
+                        initiator: false,
+                        trickle: false,
+                        stream: stream,
+                      });
                     getReceiverCode();
                 }
 
                 peer.on("signal", async (data) => {
                     if (isAdmin) {
+                        console.log("data", data);
                         let payload = {
                             id,
                             signalData: data,

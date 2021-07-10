@@ -33,8 +33,9 @@ const HomePage = () => {
                 <div className="body">
                     <div className="left-side">
                         <div className="content">
+                            <h2>Welcome to</h2>
                             <h1>MICROSOFT TEAMS</h1>
-                            <h2>Video Conferencing Web Application</h2>
+                            <h2>Meet, chat, call, and collaborate in just on place </h2>
                             <div className="action-btn">
                                 <button className="btn blue" onClick={startCall}>
                                     <FontAwesomeIcon className="icon-block" icon={faVideo} />
@@ -45,9 +46,9 @@ const HomePage = () => {
                                         <FontAwesomeIcon className="icon-block" icon={faKeyboard} />
                                         <input id="meetlink" placeholder="Enter the meeting link" />
                                     </div>
-                                    <button className="btn join" onClick={joinCall}>
-                                        Join
-                                    </button>
+                                    <p className="join" onClick={joinCall}>
+                                        Join now
+                                    </p>
                                 </div>
                             </div>
                         </div>
