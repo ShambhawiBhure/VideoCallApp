@@ -168,7 +168,7 @@ const CallPage = () => {
 
         peer.on("stream", (stream) => {
             // got remote video stream, now let's show it in a video tag
-            let video = document.querySelector("video");
+            let video = document.querySelectorAll("video")[1];
 
             if ("srcObject" in video) {
                 video.srcObject = stream;
@@ -249,9 +249,11 @@ const disconnectCall = () => {
 
 return (
     <div className="callpage-container">
+        <div id="video-grid">
+            <video id="myVideo" className="video-container1" src="" controlsList="nodownload nofullscreen noremoteplayback"></video>
+            <video className="video-container2" src="" controlsList="nodownload nofullscreen noremoteplayback"></video>
+        </div>
         
-        <video className="video-container2" src="" controlsList="nodownload nofullscreen noremoteplayback"></video>
-        <video id="myVideo" className="video-container1" src="" controlsList="nodownload nofullscreen noremoteplayback"></video>
         <CallPageHeader
             isMessenger={isMessenger}
             setIsMessenger={setIsMessenger}

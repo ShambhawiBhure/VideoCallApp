@@ -37,20 +37,17 @@ const Messenger = ({
 
     return (
         <div className="messenger-container">
-            <div className="messenger-header">
-                <h3>Meeting Details</h3>
-                <FontAwesomeIcon className="icon" icon={faTimes}
+            <div className="message-header">
+                <div className="tab">
+                    <FontAwesomeIcon className="icon" icon={faComment} />
+                    <h5>Meeting Chat</h5>
+                </div>
+                <FontAwesomeIcon id="cross" className="icon" icon={faTimes}
                     onClick={() => {
                         //close the chat section
                         setIsMessenger(false);
                     }}
                 />
-            </div>
-            <div className="message-header-tabs">
-                <div className="tab active">
-                    <FontAwesomeIcon className="icon" icon={faComment} />
-                    <p>Meeting Chat</p>
-                </div>
             </div>
 
             <div className="chat-section">

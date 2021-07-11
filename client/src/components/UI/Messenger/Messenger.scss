@@ -1,66 +1,58 @@
 .messenger-container{
     position: absolute;
-    bottom: 0;
+    bottom: 82px;
     right: 0;
-    background: #dee1ee;
-    color: #000;
-    height: calc(100vh - 50px);
+    background: #585A96;
+    color: #fff;
+    height: calc(100vh - 132px);
     width: 350px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    .messenger-header{
-        padding: 20px;
+    border-left: 2px solid #585A96;
+    border-radius: 5px;
+    .message-header {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 10px 0;
-        h3{
-            margin: 0;
-            font-weight: 400;
-        }
-        .icon{
-            cursor: pointer;
-            font-size: 20px;
-            &:hover{
-                color: #7C6843;
-            }
-        }
-    }
-    .message-header-tabs {
-        display: flex;
-        align-items: center;
+        align-items: left;
         border-bottom: 1px solid #eee;
+        #cross{
+            margin-right: 25px;
+            margin-top: 20px;
+            font-size: large;
+        }
         .tab{
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: left;
+            margin: 10px 5px;
             width: 100%;
-            color: #555;
-            p{
-                margin-left: 10px;
-                padding-top: 10px;
-            }
-            &.active{
-                border-bottom: 2px solid #000;
-                color: #000;
-            }
-            &:hover{
+            color: #fff;
+            .icon{
                 cursor: pointer;
-                background: rgba(0, 121, 107, 0.039);
+                margin-left: 10px;
+                font-size: 18px;
+            }
+            h5{
+                margin-left: 5px;
+                padding-top: 6px;
             }
         }
     }
     .chat-section{
         padding: 20px;
         flex: 1;
-        overflow: scroll;
+        overflow: auto;
+        background: linear-gradient(90deg, #F8F8FF 0%, #FFFFFF 125.42%),
+        linear-gradient(90deg, #F8F8FF 0%, #FFFFFF 125.42%),
+        linear-gradient(90deg, #F8F8FF 0%, #FFFFFF 125.42%);
+        border-radius: 5px;
         .chat-block{
             margin-bottom: 30px;
             .sender{
                 font-weight: 500;
                 font-size: 14px;
+                color: #373644;
                 small{
                     margin-left: 5px;
                     font-weight: 300;
@@ -69,7 +61,7 @@
             .msg{
                 margin: 0;
                 padding-top: 5px;
-                color: #000;
+                color: #373644;
                 font-size: 14px;
             }
         }
@@ -81,19 +73,17 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        color: #000;
+        color: #fff;
         input{
             padding: 5px;
             border: none;
             outline: none;
             border-bottom: 1px solid #eee;
             width: 90%;
+            border-radius: 7px;
         }
         .icon{
             cursor: pointer;
-            &:hover{
-                color: #7C6843;
-            }
         }
     }
 }

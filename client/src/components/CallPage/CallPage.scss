@@ -1,24 +1,24 @@
 .callpage-container{
-    color: #373644;
+    height: 100vh;
+    background-color: #373644;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     .video-container1{
-        background: rgb(80, 79, 79);
-        height: 500px;
+        background: #373644;
+        height: 530px;
         width: 500px;
         object-fit: cover;
-        position: absolute;
-        top: 20%;
-        left: 12%;
         z-index: -1;
+        border-radius: 3px;
     }
     .video-container2{
-        background: rgb(80, 79, 79);
-        height: 500px;
+        background: #373644;
+        height: 530px;
         width: 500px;
         object-fit: cover;
-        position: absolute;
-        bottom: 10.75%;
-        right: 23%;
         z-index: -1;
+        border-radius: 3px;
     }
 
 }

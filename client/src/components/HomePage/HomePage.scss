@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&display=swap');
+
 .home-page{
     display: flex;
     flex-direction: column;
@@ -8,7 +10,7 @@
     // background: #141E30;  /* fallback for old browsers */
     // background: -webkit-linear-gradient(to right, #141E30, #243B55);  
     // background: linear-gradient(to right, #141E30, #243B55); 
-    
+    font-family: 'Lexend', sans-serif;
     .body{
         flex: 1;
         display: flex;
@@ -22,7 +24,7 @@
                     font-weight: 600;
                     margin-bottom: 3%;
                     // color: #464775;
-                    color: #242B64;
+                    color: #464775;
                 }
                 h2{
                     font-size: 30px;
@@ -46,14 +48,22 @@
                         border: none;
                         outline: none;
                         // background: #464775; 
-                        background: #242B64;
+                        background: #464775;
                         border-radius: 5px;
                         // color: #F8F8FF;
                         color: #fff;
                         text-decoration: none;
+                        transition: all 0.1s ease-in;
                         .icon-block{
                             padding-right: 10px;
                             font-size: x-large;
+                        }
+                        &:hover{
+                            // background-color: #FCD68F;
+                            // color: #242B64;
+                            // border: 2px solid #242B64;
+                            transform: translateY(-2px);
+                            box-shadow: 4px 4px 10px rgba(0,0,0,.2);
                         }
                     }
                     .join{
@@ -64,6 +74,7 @@
                         margin: auto 2px;
                         &:hover{
                             cursor: pointer;
+                            text-shadow:1px 1px #000;
                         }
                     }
                     .input-block{
@@ -106,7 +117,7 @@
         .right-side{
             img{
                 width: 600px;
-                height: 500px;
+                height: 600px;
             }
         }
     }

@@ -1,20 +1,22 @@
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&display=swap');
 
 #dblue{
-    background-color: #242B64 !important;
+    font-family: 'Lexend', sans-serif;
+    background-color: #464775 !important;
     #logo{
         margin-left: 90px;
     }
-}
-
-.icon-block{
-    &:hover{
-        color: #fff;
+    #last{
+        margin-left: 955px !important;
+        .icon-block{
+            &:hover{
+                color: #fff;
+            }
+        }
     }
 }
-.last{
-    margin-right: 9px !important;
-}
+
 
 // *{
 //     margin: 0px;
@@ -25,7 +27,7 @@
 
 // nav {
 //     display: flex;
-//     justify-content: space-around;
+//     justify-content: left;
 //     align-items: center;
 //     min-height: 8vh;
 //     background-color: #464775;

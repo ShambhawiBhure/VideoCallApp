@@ -6,6 +6,8 @@ import {
 import {
     WhatsappShareButton,
     WhatsappIcon,
+    FacebookMessengerShareButton,
+    FacebookMessengerIcon
 } from "react-share";
 
 import './MeetingInfo.scss';
@@ -14,7 +16,7 @@ const MeetingInfo = ({ setMeetInfoPopup, url }) => {
     return (
         <div className="meeting-info-block">
             <div className="meeting-header">
-                <h3>Meeting Now!!</h3>
+                <h4>Meeting Now!!</h4>
                 <FontAwesomeIcon className="icon" icon={faTimes} onClick={() => {
                     //close the meeting info popup
                     setMeetInfoPopup(false);
@@ -25,6 +27,7 @@ const MeetingInfo = ({ setMeetInfoPopup, url }) => {
             <p className="info-text">
                 Share the meeting link with others
             </p>
+            
             <div className="meet-link">
                 <span>{url}</span>
                 <FontAwesomeIcon className="icon" icon={faCopy} onClick={() => {
@@ -34,7 +37,7 @@ const MeetingInfo = ({ setMeetInfoPopup, url }) => {
                 />
             </div>
             <div className="share_social">
-                <p className="info-text">Share directly on Whatsapp</p>
+                <p className="info-text">Share directly on :</p>
                 <WhatsappShareButton
                     url={url}
                     title={`Join this meeting with the given code \n`}
@@ -42,6 +45,14 @@ const MeetingInfo = ({ setMeetInfoPopup, url }) => {
                     className="share_icon">
                     <WhatsappIcon size={26} round />
                 </WhatsappShareButton>
+
+                <FacebookMessengerShareButton
+                    url={url}
+                    title={`Join this meeting with the given code \n`}
+                    separator="Link: "
+                    className="share_icon">
+                    <FacebookMessengerIcon size={26} round />
+                </FacebookMessengerShareButton>
             </div>
         </div>
     )

@@ -6,6 +6,7 @@ import Header from '../UI/Header/Header';
 import Support from '../Support/Support';
 import './HomePage.scss';
 
+
 const HomePage = () => {
     const history = useHistory();
 
@@ -26,9 +27,11 @@ const HomePage = () => {
         history.push(`/${url[url.length - 1]}`);
     }
 
+    
+
     return (
         <>
-        <Header />
+            <Header />
             <div className="home-page">
                 <div className="body">
                     <div className="left-side">
@@ -54,17 +57,17 @@ const HomePage = () => {
                         </div>
                     </div>
                     <div className="right-side">
-                        {/* https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWD1Ul?ver=90f6&q=90&h=1300&w=1600&b=%23FFFFFFFF&aim=true */}
                         <img src="https://statics.teams.microsoft.com/hashedassets-launcher/launcher_meetings_new2.9fa71945172e1585663594bc17a4a301.svg"></img>
-                        
+
                     </div>
                 </div>
             </div>
-
             <div id="support">
                 <Support />
             </div>
+            
         </>
+
 
     );
 }

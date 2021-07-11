@@ -1,5 +1,5 @@
 .message-alert-popup{
-    background: #dee1ee;
+    background: #585A96;
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -11,7 +11,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 5px;
-        color: #000;
+        color: #fff;
         .icon {
             margin-right: 10px;
         }
@@ -27,5 +27,6 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        color: #fff;
     }
 }
