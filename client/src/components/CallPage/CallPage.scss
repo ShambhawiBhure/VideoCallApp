@@ -20,7 +20,15 @@
         z-index: -1;
         border-radius: 3px;
     }
-
+}
+.video-container{
+    margin-left: 30vw;
+    background: #373644;
+    height: 530px;
+    width: 500px;
+    object-fit: cover;
+    z-index: -1;
+    border-radius: 3px;
 }
 
 // #video-grid{

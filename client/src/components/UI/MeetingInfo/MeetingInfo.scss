@@ -28,7 +28,7 @@
         background: #F8F8F8;
         padding: 15px;
         border-radius: 7px;
-        span{
+        div{
             font-size: 14px;
             font-weight: 600;
             border: none;
@@ -36,6 +36,7 @@
             background: none;
             flex: 1;
             color: #464775;
+            overflow-wrap: break-word;
         }
         .icon{
             cursor: pointer;

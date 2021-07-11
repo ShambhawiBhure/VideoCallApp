@@ -85,6 +85,7 @@ const CallPage = () => {
                 } else {
                     myVideo.src = window.URL.createObjectURL(stream); // for older browsers
                 }
+                myVideo.className = "video-container";
                 myVideo.muted = true;
                 myVideo.play();
 
@@ -167,6 +168,8 @@ const CallPage = () => {
         });
 
         peer.on("stream", (stream) => {
+            myVideo.classList.remove("video-cotainer");
+            myVideo.className = "video-container2";
             // got remote video stream, now let's show it in a video tag
             let video = document.querySelectorAll("video")[1];
 

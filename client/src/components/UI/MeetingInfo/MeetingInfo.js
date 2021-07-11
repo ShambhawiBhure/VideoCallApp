@@ -29,7 +29,7 @@ const MeetingInfo = ({ setMeetInfoPopup, url }) => {
             </p>
             
             <div className="meet-link">
-                <span>{url}</span>
+                <div>{url}</div>
                 <FontAwesomeIcon className="icon" icon={faCopy} onClick={() => {
                     //copy the url
                     navigator.clipboard.writeText(url)
