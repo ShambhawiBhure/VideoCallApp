@@ -85,7 +85,7 @@ const CallPage = () => {
                 } else {
                     myVideo.src = window.URL.createObjectURL(stream); // for older browsers
                 }
-
+                myVideo.muted = true;
                 myVideo.play();
 
                 stream.getAudioTracks()[0].enabled = false;
