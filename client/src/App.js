@@ -2,6 +2,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import CallPage from './components/CallPage/CallPage';
 import HomePage from './components/HomePage/HomePage';
 import NoMatch from './components/NoMatch/NoMatch';
+import { useEffect } from "react";
 import "./App.scss";
 
 function App() {

@@ -1,26 +1,42 @@
-// @import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    color: white;
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: #464775;
-    .nav-links {
-        display: flex;
-        justify-content: space-around;
-        width: 20%;
-        li {
-            list-style: none;
-        }
+#dblue{
+    background-color: #242B64 !important;
+    #logo{
+        margin-left: 90px;
     }
 }
+
+.icon-block{
+    &:hover{
+        color: #fff;
+    }
+}
+.last{
+    margin-right: 9px !important;
+}
+
+// *{
+//     margin: 0px;
+//     padding: 0px;
+//     box-sizing: border-box;
+//     color: white;
+// }
+
+// nav {
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     min-height: 8vh;
+//     background-color: #464775;
+//     .nav-links {
+//         display: flex;
+//         justify-content: space-around;
+//         width: 20%;
+//         li {
+//             list-style: none;
+//         }
+//     }
+// }
 
 

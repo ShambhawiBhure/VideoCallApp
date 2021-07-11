@@ -5,7 +5,9 @@
     background: linear-gradient(90deg, #F8F8FF 0%, #FFFFFF 125.42%),
         linear-gradient(90deg, #F8F8FF 0%, #FFFFFF 125.42%),
         linear-gradient(90deg, #F8F8FF 0%, #FFFFFF 125.42%);
-
+    // background: #141E30;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #141E30, #243B55);  
+    // background: linear-gradient(to right, #141E30, #243B55); 
     
     .body{
         flex: 1;
@@ -19,12 +21,14 @@
                     font-size: 55px;
                     font-weight: 600;
                     margin-bottom: 3%;
-                    color: #464775;
+                    // color: #464775;
+                    color: #242B64;
                 }
                 h2{
                     font-size: 30px;
                     font-weight: 300;
-                    color: #464775;
+                    // color: #464775;
+                    color: #242B64;
                 }
                 .action-btn{
                     margin-top: 50px;
@@ -41,9 +45,11 @@
                         padding: 15px;
                         border: none;
                         outline: none;
-                        background: #464775; 
+                        // background: #464775; 
+                        background: #242B64;
                         border-radius: 5px;
-                        color: #F8F8FF;
+                        // color: #F8F8FF;
+                        color: #fff;
                         text-decoration: none;
                         .icon-block{
                             padding-right: 10px;
@@ -52,8 +58,10 @@
                     }
                     .join{
                         font-weight: 600;
-                        color: #464775;
-                        margin: auto;
+                        background: transparent;
+                        color: #242B64;
+                        // color: #464775;
+                        margin: auto 2px;
                         &:hover{
                             cursor: pointer;
                         }
@@ -63,27 +71,32 @@
                         display: flex;
                         flex: 1;
                         .input-section{
-                            border: 1px solid #6264A7;
-                            box-sizing: border-box;
-                            border-radius: 5px;
+                            // border: 1px solid #6264A7;
+                            // box-sizing: border-box;
+                            // border-radius: 5px;
+                            margin-right: 10px;
                             position: relative;
                             .icon-block{
                                 position: absolute;
                                 top: 50%;
                                 transform: translate(10px, -50%);
-                                color: #464775;
+                                // color: #464775;
+                                color: #5f6368;
                             }
                             input{
-                                color: #fff;
+                                color: #000;
                                 font-size: 16px;
                                 background: transparent;
-                                height: 52px;
-                                border: 1px solid #fff;
+                                height: 57px;
+                                border: 1px solid #242B64;
                                 border-radius: 5px;
                                 padding-left: 35px;
                                 width: 100%;
                                 box-sizing: border-box;
                                 outline: none;
+                                &:hover{
+                                    border: 2px solid #242B64;
+                                }
                             }
                         }
                     }

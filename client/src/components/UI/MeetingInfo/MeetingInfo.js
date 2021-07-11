@@ -14,7 +14,7 @@ const MeetingInfo = ({ setMeetInfoPopup, url }) => {
     return (
         <div className="meeting-info-block">
             <div className="meeting-header">
-                <h2>Meeting Now!!</h2>
+                <h3>Meeting Now!!</h3>
                 <FontAwesomeIcon className="icon" icon={faTimes} onClick={() => {
                     //close the meeting info popup
                     setMeetInfoPopup(false);

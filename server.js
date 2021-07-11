@@ -43,7 +43,7 @@ setInterval(getNewToken, 1000 * 60 * 10);
 
 app.get('/api/get-icserver', function (req, res) {
   if (!cachedToken) {
-    res.send(400, 'Problem getting ice servers data from Twilio')
+    res.status(400).send('Problem getting ice servers data from Twilio')
   } else {
     res.json(cachedToken.iceServers);
   }

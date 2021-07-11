@@ -28,8 +28,8 @@ const HomePage = () => {
 
     return (
         <>
+        <Header />
             <div className="home-page">
-                <Header />
                 <div className="body">
                     <div className="left-side">
                         <div className="content">
@@ -54,7 +54,9 @@ const HomePage = () => {
                         </div>
                     </div>
                     <div className="right-side">
+                        {/* https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWD1Ul?ver=90f6&q=90&h=1300&w=1600&b=%23FFFFFFFF&aim=true */}
                         <img src="https://statics.teams.microsoft.com/hashedassets-launcher/launcher_meetings_new2.9fa71945172e1585663594bc17a4a301.svg"></img>
+                        
                     </div>
                 </div>
             </div>
