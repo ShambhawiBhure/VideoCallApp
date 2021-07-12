@@ -6,7 +6,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {
     WhatsappShareButton,
-    WhatsappIcon
+    WhatsappIcon,
+    FacebookMessengerShareButton,
+    FacebookMessengerIcon
 } from "react-share";
 
 import './MeetingInfo.scss';
@@ -44,6 +46,14 @@ const MeetingInfo = ({ setMeetInfoPopup, url }) => {
                     className="share_icon">
                     <WhatsappIcon size={26} round />
                 </WhatsappShareButton>
+
+                <FacebookMessengerShareButton
+                    url={url}
+                    title={`Join this meeting with the given code \n`}
+                    separator="Link: "
+                    className="share_icon">
+                    <FacebookMessengerIcon size={26} round />
+                </FacebookMessengerShareButton>
             </div>
         </div>
     )
