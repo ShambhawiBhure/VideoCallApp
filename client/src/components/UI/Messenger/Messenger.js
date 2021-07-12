@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faTimes,
-    faComment,
+    faTimesCircle,
+    faCommentAlt,
     faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import { formatDate } from '../../../utils/helpers';
@@ -39,10 +39,10 @@ const Messenger = ({
         <div className="messenger-container">
             <div className="message-header">
                 <div className="tab">
-                    <FontAwesomeIcon className="icon" icon={faComment} />
+                    <FontAwesomeIcon className="icon" icon={faCommentAlt} />
                     <h5>Meeting Chat</h5>
                 </div>
-                <FontAwesomeIcon id="cross" className="icon" icon={faTimes}
+                <FontAwesomeIcon id="cross" className="icon" icon={faTimesCircle}
                     onClick={() => {
                         //close the chat section
                         setIsMessenger(false);

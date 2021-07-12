@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faComment } from "@fortawesome/free-solid-svg-icons";
+import { faCommentAlt } from "@fortawesome/free-solid-svg-icons";
 
 import './CallPageHeader.scss';
 import { useState, useEffect } from "react";
@@ -30,7 +30,7 @@ const CallPageHeader = ({
                 <div className="optionheader">
                     <div className="header-items icon-block"
                         onClick={() => { setIsMessenger(true); setMessageAlert({}); }} >
-                        <FontAwesomeIcon className="icon" icon={faComment} />
+                        <FontAwesomeIcon className="icon" icon={faCommentAlt} />
                         {!isMessenger && messageAlert.alert &&
                             (<span className="alert-circle-icon"></span>)} </div>
                     <div className="header-items date-block"> {currentTime}

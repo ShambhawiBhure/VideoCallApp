@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faCopy,
     faTimes,
+    faTimesCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import {
     WhatsappShareButton,
@@ -17,7 +18,7 @@ const MeetingInfo = ({ setMeetInfoPopup, url }) => {
         <div className="meeting-info-block">
             <div className="meeting-header">
                 <h4>Meeting Now!!</h4>
-                <FontAwesomeIcon className="icon" icon={faTimes} onClick={() => {
+                <FontAwesomeIcon className="icon" icon={faTimesCircle} onClick={() => {
                     //close the meeting info popup
                     setMeetInfoPopup(false);
                 }}
