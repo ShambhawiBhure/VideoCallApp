@@ -1,5 +1,5 @@
 # VideoCallApp
-<h>About the project</h1>
+<h1>About the project</h1>
 <p>A web application that allows two people to have a video/audio call, along with the screen sharing feature and chat functionality.</p>
   <br>
 
