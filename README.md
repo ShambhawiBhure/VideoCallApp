@@ -11,6 +11,16 @@
   <li>Socket.io, Peerjs</li>
   <li>WebRTC libraries and required dependencies</li>
  </ul>
+ 
+ <h3>Features</h3>
+ <ul>
+  <li>Toggle Video</li>
+  <li>Toggle Audio</li>
+  <li>Live screen sharing</li>
+  <li>Live Chat with timestamp</li>
+  <li>Copy meet link fetaure for the meeting initiator</li>
+  <li>Hang-up/leave the meeting</li>
+ 
 
 
 
