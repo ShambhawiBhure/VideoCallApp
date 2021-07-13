@@ -2,7 +2,7 @@
 <h2>About the project</h2>
 <p>This is a project made under <strong>Microsoft Engage Mentorship Program 2021</strong></p>
 <br>
-<p>Developed using the <i>agile development methodology</i>, this is a web application that allows two people to have a video/audio call, along with the screen sharing feature and chat functionality.</p>
+<p>Developed using the <i>agile development methodology</i>, this is a video conferencing web application that allows two people to have a video/audio call, along with the some add-on features.</p>
   <br>
 
   <p>Techstack used : </p>
