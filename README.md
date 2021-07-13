@@ -17,7 +17,7 @@
   <li>Toggle Video</li>
   <li>Toggle Audio</li>
   <li>Live screen sharing</li>
-  <li>Live Chat with timestamp</li>
+  <li>Live Chat with timestamp and message alert</li>
   <li>Copy meet link fetaure for the meeting initiator</li>
   <li>Hang-up/leave the meeting</li>
  
