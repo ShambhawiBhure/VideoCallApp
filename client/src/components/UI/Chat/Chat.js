@@ -7,10 +7,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { formatDate } from '../../../utils/helpers';
 
-import './Messenger.scss';
+import './Chat.scss';
 
-const Messenger = ({
-    setIsMessenger,
+const Chat = ({
+    setIsChat,
     sendMsg,
     messageList
 }) => {
@@ -36,8 +36,8 @@ const Messenger = ({
     };
 
     return (
-        <div className="messenger-container">
-            <div className="message-header">
+        <div className="chat-container">
+            <div className="chat-header">
                 <div className="tab">
                     <FontAwesomeIcon className="icon" icon={faCommentAlt} />
                     <h5>Meeting Chat</h5>
@@ -45,7 +45,7 @@ const Messenger = ({
                 <FontAwesomeIcon id="cross" className="icon" icon={faTimesCircle}
                     onClick={() => {
                         //close the chat section
-                        setIsMessenger(false);
+                        setIsChat(false);
                     }}
                 />
             </div>
@@ -62,7 +62,7 @@ const Messenger = ({
                 ))}
 
             </div>
-            <div className="send-msg-section">
+            <div className="send-msg-block">
                 <input placeholder="Type a new message"
                     value={msg}
                     onChange={(e) => handleChangeMsg(e)}
@@ -75,4 +75,4 @@ const Messenger = ({
     )
 }
 
-export default Messenger;
+export default Chat;

@@ -1,23 +1,22 @@
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import CallPage from './components/CallPage/CallPage';
+import MeetPage from './components/MeetPage/MeetPage';
 import HomePage from './components/HomePage/HomePage';
-import NoMatch from './components/NoMatch/NoMatch';
-import { useEffect } from "react";
+import Invalid from './components/Invalid/Invalid';
 import "./App.scss";
 
 function App() {
   return (
-    //Routes for HomePage, CallPage and NoMatch Page
+    //Routes for HomePage, MeetPage and Invalid Page
     <Router>
       <Switch>
         <Route exact path = "/"> 
           <HomePage />
         </Route>
         <Route exact path = "/:id">
-          <CallPage />
+          <MeetPage />
         </Route>
         <Route path = "*">
-          <NoMatch />
+          <Invalid />
         </Route>
       </Switch>
     </Router>

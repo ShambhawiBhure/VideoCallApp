@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faCopy,
-    faTimes,
     faTimesCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -11,21 +10,21 @@ import {
     FacebookMessengerIcon
 } from "react-share";
 
-import './MeetingInfo.scss';
+import './MeetingNow.scss';
 
-const MeetingInfo = ({ setMeetInfoPopup, url }) => {
+const MeetingInfo = ({ setmeetNowPopup, url }) => {
     return (
-        <div className="meeting-info-block">
-            <div className="meeting-header">
+        <div className="meeting-now-block">
+            <div className="block-header">
                 <h4>Meeting Now!!</h4>
                 <FontAwesomeIcon className="icon" icon={faTimesCircle} onClick={() => {
                     //close the meeting info popup
-                    setMeetInfoPopup(false);
+                    setmeetNowPopup(false);
                 }}
                 />
             </div>
 
-            <p className="info-text">
+            <p className="text">
                 Share the meeting link with others
             </p>
             
@@ -37,13 +36,13 @@ const MeetingInfo = ({ setMeetInfoPopup, url }) => {
                 }}
                 />
             </div>
-            <div className="share_social">
-                <p className="info-text">Send an invite through :</p>
+            <div className="share-social">
+                <p className="text">Send an invite through :</p>
                 <WhatsappShareButton
                     url={url}
                     title={`Join this meeting with the given code \n`}
                     separator="Link: "
-                    className="share_icon">
+                    className="share-icon">
                     <WhatsappIcon size={26} round />
                 </WhatsappShareButton>
 
@@ -51,7 +50,7 @@ const MeetingInfo = ({ setMeetInfoPopup, url }) => {
                     url={url}
                     title={`Join this meeting with the given code \n`}
                     separator="Link: "
-                    className="share_icon">
+                    className="share-icon">
                     <FacebookMessengerIcon size={26} round />
                 </FacebookMessengerShareButton>
             </div>

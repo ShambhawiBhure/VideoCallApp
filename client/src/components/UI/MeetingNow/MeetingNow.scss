@@ -1,4 +1,4 @@
-.meeting-info-block{
+.meeting-now-block{
     position: absolute;
     top: 65px;
     left: 20px;
@@ -7,7 +7,7 @@
     width: 410px;
     height: 210px;
     border-radius: 5px;
-    .meeting-header{
+    .block-header{
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -17,7 +17,7 @@
             font-size: 20px;
         }
     }
-    .info-text{
+    .text{
         color: #fff;
         font-size: 14px;
     }
@@ -46,14 +46,14 @@
             }
         } 
     }
-    .share_social {
+    .share-social {
         display: flex;
         margin-top: 1rem;
-        .info-text{
+        .text{
             color: #fff;
             font-size: 14px;
         }
-        .share_icon {
+        .share-icon {
             display: flex;
             margin-left: 0.4rem;
         }

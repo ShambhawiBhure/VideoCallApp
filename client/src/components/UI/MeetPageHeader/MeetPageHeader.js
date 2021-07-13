@@ -1,13 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCommentAlt } from "@fortawesome/free-solid-svg-icons";
-
-import './CallPageHeader.scss';
 import { useState, useEffect } from "react";
-import { formatDate } from './../../../utils/helpers';
+import { formatDate } from '../../../utils/helpers';
+import './MeetPageHeader.scss';
 
-const CallPageHeader = ({
-    isMessenger,
-    setIsMessenger,
+const MeetPageHeader = ({
+    isChat,
+    setIsChat,
     messageAlert,
     setMessageAlert,
 }) => {
@@ -26,13 +25,14 @@ const CallPageHeader = ({
 
     return (
         <>
-            <div className="frame-header">
-                <div className="optionheader">
-                    <div className="header-items icon-block"
-                        onClick={() => { setIsMessenger(true); setMessageAlert({}); }} >
+            <div className="side-header">
+                <div className="header">
+                    <div className="header-items chat-block"
+                        onClick={() => { setIsChat(true); setMessageAlert({}); }} >
                         <FontAwesomeIcon className="icon" icon={faCommentAlt} />
-                        {!isMessenger && messageAlert.alert &&
-                            (<span className="alert-circle-icon"></span>)} </div>
+                        {!isChat && messageAlert.alert &&
+                            (<span className="alert-circle-icon"></span>)}
+                    </div>
                     <div className="header-items date-block"> {currentTime}
                     </div>
                 </div>
@@ -41,4 +41,4 @@ const CallPageHeader = ({
     )
 }
 
-export default CallPageHeader;
+export default MeetPageHeader;

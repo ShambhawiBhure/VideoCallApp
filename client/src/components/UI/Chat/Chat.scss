@@ -1,4 +1,4 @@
-.messenger-container{
+.chat-container{
     position: absolute;
     bottom: 82px;
     right: 0;
@@ -12,7 +12,7 @@
     flex-direction: column;
     border-left: 2px solid #585A96;
     border-radius: 5px;
-    .message-header {
+    .chat-header {
         display: flex;
         align-items: left;
         border-bottom: 1px solid #eee;
@@ -66,7 +66,7 @@
             }
         }
     }
-    .send-msg-section{
+    .send-msg-block{
         padding: 20px;
         border-top: 1px solid #eee;
         border-bottom: 1px solid #eee;

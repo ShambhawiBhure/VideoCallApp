@@ -8,32 +8,32 @@ import {
     faPhoneSlash,
 } from "@fortawesome/free-solid-svg-icons";
 
-import './CallPageHeader1.scss';
+import './MeetPageHeader1.scss';
 
-const CallPageHeader1 = ({
-    isPresenting,
+const MeetPageHeader1 = ({
+    isSharing,
     stopScreenShare,
     screenShare,
     isAudio,
-    toggleAudio,
+    AudioOnOff,
     isVideo,
-    toggleVideo,
+    VideoOnOff,
     disconnectCall,
 }) => {
     return (
-        <div className="footer-item">
-            <div className="center-item">
+        <div className="header-item">
+            <div className="control-items">
                 <div className={`icon-block ${isVideo ? "bg" : null}`}
-                    onClick={() => toggleVideo(!isVideo)}
+                    onClick={() => VideoOnOff(!isVideo)}
                 >
                     <FontAwesomeIcon className="icon" icon={isVideo ? faVideo : faVideoSlash} />
                 </div>
                 <div className={`icon-block ${isAudio ? "bg" : null}`}
-                    onClick={() => toggleAudio(!isAudio)}
+                    onClick={() => AudioOnOff(!isAudio)}
                 >
                     <FontAwesomeIcon className="icon" icon={isAudio ? faMicrophone : faMicrophoneSlash} />
                 </div>
-                {isPresenting ? (
+                {isSharing ? (
                     <div className="icon-block" onClick={stopScreenShare}>
                         <FontAwesomeIcon className="icon" icon={faDesktop} />
                     </div>
@@ -51,4 +51,4 @@ const CallPageHeader1 = ({
     )
 }
 
-export default CallPageHeader1;
+export default MeetPageHeader1;

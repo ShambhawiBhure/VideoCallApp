@@ -12,10 +12,10 @@ const HomePage = () => {
 
     const startCall = () => {
         //generate new unique call id
-        const uid = shortid.generate();
+        const id = shortid.generate();
         //redirect to call page
         //#admin is a differentiator, meaning he/she started the meeting
-        history.push(`/${uid}#admin`);
+        history.push(`/${id}#admin`);
     }
 
     const joinCall = () => {
@@ -32,20 +32,20 @@ const HomePage = () => {
     return (
         <>
             <Header />
-            <div className="home-page">
+            <div className="homepage">
                 <div className="body">
-                    <div className="left-side">
+                    <div className="left">
                         <div className="content">
                             <h2>Welcome to</h2>
                             <h1>MICROSOFT TEAMS</h1>
                             <h2>Meet, chat, call, and collaborate in just on place </h2>
-                            <div className="action-btn">
+                            <div className="meet-btn">
                                 <button className="btn blue" onClick={startCall}>
                                     <FontAwesomeIcon className="icon-block" icon={faVideo} />
                                     New Meeting
                                 </button>
-                                <div className="input-block">
-                                    <div className="input-section">
+                                <div className="input"> 
+                                    <div className="link-input">
                                         <FontAwesomeIcon className="icon-block" icon={faKeyboard} />
                                         <input id="meetlink" placeholder="Enter the meeting link" />
                                     </div>

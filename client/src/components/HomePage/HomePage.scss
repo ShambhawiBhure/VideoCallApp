@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&display=swap');
 
-.home-page{
+.homepage{
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -16,7 +16,7 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        .left-side{
+        .left{
             max-width: 500px;
             .content{
                 h1{
@@ -32,7 +32,7 @@
                     // color: #464775;
                     color: #242B64;
                 }
-                .action-btn{
+                .meet-btn{
                     margin-top: 50px;
                     display: flex;
                     align-items: center;
@@ -77,11 +77,11 @@
                             text-shadow:1px 1px #000;
                         }
                     }
-                    .input-block{
+                    .input{
                         margin-left: 20px;
                         display: flex;
                         flex: 1;
-                        .input-section{
+                        .link-input{
                             // border: 1px solid #6264A7;
                             // box-sizing: border-box;
                             // border-radius: 5px;

@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
 import Header from '../UI/Header/Header';
 
-import './NoMatch.scss';
+import './Invalid.scss';
 
-const NoMatch = () => {
+const Invalid = () => {
     return (
-        <div className="no-match">
+        <div className="invalid">
             <Header />
-            <div className="no-match-content">
+            <div className="invalid-content">
                 <h2>Invalid Video Call.</h2>
-                <div className="action-btn">
+                <div className="back-btn">
                     <Link className="btn blue" to="/">
                         Return to Home Page.
                     </Link>
@@ -19,4 +19,4 @@ const NoMatch = () => {
     )
 }
 
-export default NoMatch;
+export default Invalid;
