@@ -4,8 +4,8 @@ import { getRequest, postRequest } from '../../utils/apiRequests';
 import { BASE_URL, GET_CALL_ID, SAVE_CALL_ID, GET_ICE_SERVER } from '../../utils/apiEndpoints';
 import io from "socket.io-client";
 import MeetPageHeader1 from '../UI/MeetPageHeader1/MeetPageHeader1';
-import MeetingNow from '../UI/MeetingNow/MeetingNow';
 import MeetPageHeader from '../UI/MeetPageHeader/MeetPageHeader';
+import MeetingNow from '../UI/MeetingNow/MeetingNow';
 import Chat from '../UI/Chat/Chat';
 import MessageListReducer from '../../reducers/MessageListReducer';
 import Peer from 'simple-peer';
@@ -20,6 +20,7 @@ const initialState = [];
 const MeetPage = () => {
     const history = useHistory();
     let { id } = useParams();
+    //admin has #admin at the end of URL
     const isAdmin = window.location.hash === "#admin" ? true : false;
     //following line of code will give the url without #admin 
     const url = `${window.location.origin}${window.location.pathname}`;
@@ -86,7 +87,7 @@ const MeetPage = () => {
                     myVideo.src = window.URL.createObjectURL(stream); // for older browsers
                 }
                 myVideo.className = "video-container";
-                myVideo.muted = true;
+                myVideo.muted = true;  //so that I don't hear my own voice
                 myVideo.play();
 
                 stream.getAudioTracks()[0].enabled = false;
@@ -170,7 +171,7 @@ const MeetPage = () => {
                 peer.on("stream", (stream) => {
                     myVideo.classList.remove("video-cotainer");
                     myVideo.className = "video-container2";
-                    // got remote video stream, now let's show it in a video tag
+                    // got remote video stream, now we need to show it in a video tag
                     let video = document.querySelectorAll("video")[1];
 
                     if ("srcObject" in video) {
@@ -199,6 +200,7 @@ const MeetPage = () => {
         });
     };
 
+    //screen sharing functionality
     const screenShare = () => {
         navigator.mediaDevices
             .getDisplayMedia({ cursor: true })
@@ -220,6 +222,8 @@ const MeetPage = () => {
             });
     };
 
+
+    //stop sharing the screen
     const stopScreenShare = () => {
         screenCastStream.getVideoTracks().forEach(function (track) {
             track.stop();
@@ -232,16 +236,20 @@ const MeetPage = () => {
         setIsSharing(false);
     };
 
+    //audio toggling
     const AudioOnOff = (value) => {
         streamObj.getAudioTracks()[0].enabled = value;
         setIsAudio(value);
     };
 
+
+    //video toggling
     const VideoOnOff = (value) => {
         streamObj.getVideoTracks()[0].enabled = value;
         setIsVideo(value);
     };
 
+    //hanging up the call
     const disconnectCall = () => {
         //destroy the peer object
         peer.destroy();

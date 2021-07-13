@@ -8,8 +8,10 @@ const Alert = ({messageAlert}) => {
         <div className="alert-popup" >
             <div className = "alert-header">
                 <FontAwesomeIcon className = "icon" icon = {faCommentAlt} />
-                <h3>{messageAlert.payload.user}</h3>
+                {/* the sender */}
+                <h3>{messageAlert.payload.user}</h3>    
             </div>
+            {/* the message */}
             <p className = "alert-msg">{messageAlert.payload.msg}</p>
         </div>
     )

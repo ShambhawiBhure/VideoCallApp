@@ -27,7 +27,7 @@ const MeetingInfo = ({ setmeetNowPopup, url }) => {
             <p className="text">
                 Share the meeting link with others
             </p>
-            
+
             <div className="meet-link">
                 <div>{url}</div>
                 <FontAwesomeIcon className="icon" icon={faCopy} onClick={() => {
@@ -36,6 +36,8 @@ const MeetingInfo = ({ setmeetNowPopup, url }) => {
                 }}
                 />
             </div>
+
+            {/* sharing the meeting link over social media to increase user engagement */}
             <div className="share-social">
                 <p className="text">Send an invite through :</p>
                 <WhatsappShareButton

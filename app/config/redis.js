@@ -1,4 +1,5 @@
 let redis = require("redis");
+//credentials from redis labs
 var options = {
   host: process.env.REDIS_HOST,
   port: process.env.REDIS_PORT,

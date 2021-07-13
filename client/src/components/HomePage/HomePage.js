@@ -27,7 +27,7 @@ const HomePage = () => {
         history.push(`/${url[url.length - 1]}`);
     }
 
-    
+
 
     return (
         <>
@@ -44,7 +44,7 @@ const HomePage = () => {
                                     <FontAwesomeIcon className="icon-block" icon={faVideo} />
                                     New Meeting
                                 </button>
-                                <div className="input"> 
+                                <div className="input">
                                     <div className="link-input">
                                         <FontAwesomeIcon className="icon-block" icon={faKeyboard} />
                                         <input id="meetlink" placeholder="Enter the meeting link" />
@@ -65,7 +65,7 @@ const HomePage = () => {
             <div id="support">
                 <Support />
             </div>
-            
+
         </>
 
 

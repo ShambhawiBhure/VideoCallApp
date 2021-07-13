@@ -7,9 +7,6 @@
     background: linear-gradient(90deg, #F8F8FF 0%, #FFFFFF 125.42%),
         linear-gradient(90deg, #F8F8FF 0%, #FFFFFF 125.42%),
         linear-gradient(90deg, #F8F8FF 0%, #FFFFFF 125.42%);
-    // background: #141E30;  /* fallback for old browsers */
-    // background: -webkit-linear-gradient(to right, #141E30, #243B55);  
-    // background: linear-gradient(to right, #141E30, #243B55); 
     font-family: 'Lexend', sans-serif;
     .body{
         flex: 1;
@@ -23,13 +20,11 @@
                     font-size: 55px;
                     font-weight: 600;
                     margin-bottom: 3%;
-                    // color: #464775;
                     color: #464775;
                 }
                 h2{
                     font-size: 30px;
                     font-weight: 300;
-                    // color: #464775;
                     color: #242B64;
                 }
                 .meet-btn{
@@ -47,10 +42,8 @@
                         padding: 15px;
                         border: none;
                         outline: none;
-                        // background: #464775; 
                         background: #464775;
                         border-radius: 5px;
-                        // color: #F8F8FF;
                         color: #fff;
                         text-decoration: none;
                         transition: all 0.1s ease-in;
@@ -59,9 +52,6 @@
                             font-size: x-large;
                         }
                         &:hover{
-                            // background-color: #FCD68F;
-                            // color: #242B64;
-                            // border: 2px solid #242B64;
                             transform: translateY(-2px);
                             box-shadow: 4px 4px 10px rgba(0,0,0,.2);
                         }
@@ -70,7 +60,6 @@
                         font-weight: 600;
                         background: transparent;
                         color: #242B64;
-                        // color: #464775;
                         margin: auto 2px;
                         &:hover{
                             cursor: pointer;
@@ -82,16 +71,12 @@
                         display: flex;
                         flex: 1;
                         .link-input{
-                            // border: 1px solid #6264A7;
-                            // box-sizing: border-box;
-                            // border-radius: 5px;
                             margin-right: 10px;
                             position: relative;
                             .icon-block{
                                 position: absolute;
                                 top: 50%;
                                 transform: translate(10px, -50%);
-                                // color: #464775;
                                 color: #5f6368;
                             }
                             input{
